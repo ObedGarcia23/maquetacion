@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+  
+  }
+
+
+
+span{
+    font-size:16px;
+    letter-spacing:1.42px;
+    position:relative;
+
+}
+
+span:hover{
+    color: red;
+}
