@@ -1,102 +1,133 @@
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css"> 
-  </head>
-  <body>
-   <div style="margin: 0; padding: 0; box-sizing: border-box; height: 100%; " > <!--Marco del Body-->
-        
-        <header >
 
-            
-            <div  style="text-align: right; "> <!--Iniciar Sesion y ayuda-->
-                <a style="text-decoration: none; color: black;" href="#" >Iniciar Sesion</a>
-                <a href="#"><img src="/src/img/informacion.png" alt="" height="20px"; width="20px;" style="margin:10px;" ></a>
+<head>
+  <meta charset="UTF-8">
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
 
-            </div>
+<body>
+  <div style="margin: 0; padding: 0; box-sizing: border-box; height: 100%; ">
+    <!--Marco del Body-->
 
-            <div style="text-align: center;"> <!--Titulo-->
-                <h1>MI PRIMER SITIO WEB</h1>
-            </div>
+    <header>
 
 
-            <nav id="menu" >
-                <div style="display: flex; justify-content: center;" > <!--Menu-->
-                    <ul style="flex-direction:row;" >
-                        <li style=" display: inline;"><a  style="text-decoration: none; color: black; " href="#"><span>Inicio</span></a></li>
-                        <li style=" display: inline;"><a  style="text-decoration: none; color: black; margin-left: 10px;" href="#"><span>Servicios</span></a></li>
-                        <li style=" display: inline;"><a  style="text-decoration: none; color: black; margin-left: 10px;" href="#"><span>Proveedores</span></a></li>
-                        <li style=" display: inline;"><a  style="text-decoration: none; color: black; margin-left: 10px;" href="#"><span>Acerca de...</span></a></li>
-                    </ul>
-                </div>
+      <div style="text-align: right; ">
+        <!--Iniciar Sesion y ayuda-->
+        <a style="text-decoration: none; color: black;" href="#">Iniciar Sesion</a>
+        <a
+          href="#"><img src="data:image/png;base64,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" alt="" height="20px"; width="20px;" style="margin:10px;" ></a>
 
-            </nav>
-       
-        </header>
-        
-        <div id="carouselExampleControls" class="carousel slide slider" data-bs-ride="carousel" style="opacity: 80%; ">
-            <div class="carousel-inner"     >
-              <div class="carousel-item active">
-                <img src="/src/img/slide1.jpg" class="d-block w-100 " alt="..." height="400px" >
-              </div>
-              <div class="carousel-item">
-                <img src="/src/img/slide23.jpg" class="d-block w-100 " alt="..." height="400px">
-              </div>
-            
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      </div>
+
+      <div style="text-align: center;">
+        <!--Titulo-->
+        <h1>MI PRIMER SITIO WEB</h1>
+      </div>
+
+
+      <nav id="menu">
+        <div style="display: flex; justify-content: center;">
+          <!--Menu-->
+          <ul style="flex-direction:row;">
+            <li style=" display: inline;"><a style="text-decoration: none; color: black; "
+                href="#"><span>Inicio</span></a></li>
+            <li style=" display: inline;"><a style="text-decoration: none; color: black; margin-left: 10px;"
+                href="#"><span>Servicios</span></a></li>
+            <li style=" display: inline;"><a style="text-decoration: none; color: black; margin-left: 10px;"
+                href="#"><span>Proveedores</span></a></li>
+            <li style=" display: inline;"><a style="text-decoration: none; color: black; margin-left: 10px;"
+                href="#"><span>Acerca de...</span></a></li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </header>
+
+    <div id="carouselExampleControls" class="carousel slide slider" data-bs-ride="carousel" style="opacity: 80%; ">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://empleos.uth.hn/images/hero-header/slide-2.jpg" class="d-block w-100 " alt="..." height="400px" >
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.uthflorida.us/wp-content/uploads/UTH-florida-university-slide-31.jpg" class="d-block w-100 " alt="..." height="400px">
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
+    </div>
+
+    <div style=" height: 24rem; width: 100%; display: flex; ">
+      <!--Contenedor cuerpo Principal-->
+      <div style="width: 60%; height: 90%; ">
+        <!--Contenido publicidad-->
+
+        <div style="margin: 10px; text-align: center;">
+          <!--Imagen-->
+          <img src="https://scontent.fsap1-2.fna.fbcdn.net/v/t1.6435-9/190873049_144187474413615_5159744195150428856_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=dG3crjOVxyYAX-K9D1N&_nc_ht=scontent.fsap1-2.fna&oh=1ed206ef86e957d1f5c81fb7e8abbd3f&oe=60D93E46" alt="" height="70%" width="30%">
+        </div>
+        <div style="margin-left:10px;">
+          <!--Contenido publicitario-->
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo possimus provident doloribus quibusdam
+            quae ratione necessitatibus laboriosam magnam, fuga nesciunt delectus? Similique reprehenderit quibusdam cum
+            iste dolor! Sunt, facere sed.
+          </p>
         </div>
 
-        <div style=" height: 24rem; width: 100%; display: flex; "> <!--Contenedor cuerpo Principal-->
-            <div style="width: 60%; height: 90%; "> <!--Contenido publicidad-->
-               
-                <div style="margin: 10px; text-align: center;"><!--Imagen-->
-                    <img src="/src/img/slide1.jpg" alt="" height="50%" width="50%">
-                </div>
-                <div style="margin-left:10px;"><!--Contenido publicitario-->
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo possimus provident doloribus quibusdam quae ratione necessitatibus laboriosam magnam, fuga nesciunt delectus? Similique reprehenderit quibusdam cum iste dolor! Sunt, facere sed.
-                    </p>
-                </div>     
-           
-                   
-                
-            </div>
-            <div style="width: 40%; height: 100%; text-align: center;"> <!--Contenido Ubicacion-->
-                <div>
-                   <h2>Nuestra Ubicacion</h2>
-                </div>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15358.506334213404!2d-88.04031376438861!3d15.770881325058104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6652cab26cb7a9%3A0xd0752136fd789b38!2sOmoa!5e0!3m2!1ses!2shn!4v1622410700092!5m2!1ses!2shn" width="60%" height="10%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <div> <!--Contenido-->
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea magnam ipsa recusandae, corrupti doloremque nemo amet magni optio. Dolore eligendi in qui neque distinctio quibusdam ad, quas praesentium. Exercitationem, autem.</p>
-                </div>
-               
-            </div>
+
+
+      </div>
+      <div style="width: 40%; height: 100%; text-align: center;">
+        <!--Contenido Ubicacion-->
+        <div>
+          <h2>Nuestra Ubicacion</h2>
+        </div>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15358.506334213404!2d-88.04031376438861!3d15.770881325058104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6652cab26cb7a9%3A0xd0752136fd789b38!2sOmoa!5e0!3m2!1ses!2shn!4v1622410700092!5m2!1ses!2shn"
+            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div>
+          <!--Contenido-->
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea magnam ipsa recusandae, corrupti doloremque
+            nemo amet magni optio. Dolore eligendi in qui neque distinctio quibusdam ad, quas praesentium.
+            Exercitationem, autem.</p>
         </div>
 
-        <div style=" display: flex; justify-content: space-between;"><!--Footer-->
-            <div style="display: flex; " ><!--Redes Sociales-->
-                <h6 style="margin-left: 10px;">Facebook</h6>
-                <h6 style="margin-left: 10px;">LinkedIn</h6>
-                <h6 style="margin-left: 10px;">Instagram</h6>
-            </div>
-            <div style="margin-right: 10px;  width: 50%; text-align: end;"><!--Copyright-->
-                <h6>Creado por Obed Garcia</h6>
-            </div>
-        </div>
+      </div>
+    </div>
 
-    </div>    
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>   
-  </body>
+    <div style=" display: flex; justify-content: space-between;">
+      <!--Footer-->
+      <div style="display: flex; ">
+        <!--Redes Sociales-->
+        <h6 style="margin-left: 10px;">Facebook</h6>
+        <h6 style="margin-left: 10px;">LinkedIn</h6>
+        <h6 style="margin-left: 10px;">Instagram</h6>
+      </div>
+      <div style="margin-right: 10px;  width: 50%; text-align: end;">
+        <!--Copyright-->
+        <h6>Creado por Obed Garcia</h6>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+  </script>
+</body>
+
 </html>
